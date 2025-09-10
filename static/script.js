@@ -1,4 +1,4 @@
-document.getElementById("chat-form").addEventListener("submit", function(e) {
+document.getElementById("chat-form").addEventListener("submit", function (e) {
     e.preventDefault();
     const form = new FormData(this);
     const chatBox = document.getElementById("chat-box");
@@ -21,20 +21,20 @@ document.getElementById("chat-form").addEventListener("submit", function(e) {
         method: "POST",
         body: form
     })
-    .then(res => res.json())
-    .then(data => {
-        // Xóa đoạn "Đang trả lời..."
-        botTyping.remove();
+        .then(res => res.json())
+        .then(data => {
+            // Xóa đoạn "Đang trả lời..."
+            botTyping.remove();
 
-        // Hiển thị câu trả lời thật
-        const botMsg = document.createElement("div");
-        botMsg.className = "message bot-message";
-        botMsg.innerHTML = `<strong>Bot:</strong><div class="markdown">${marked.parse(data.answer)}</div>`;
-        chatBox.appendChild(botMsg);
+            // Hiển thị câu trả lời thật
+            const botMsg = document.createElement("div");
+            botMsg.className = "message bot-message";
+            botMsg.innerHTML = `<strong>Bot:</strong><div class="markdown">${marked.parse(data.answer)}</div>`;
+            chatBox.appendChild(botMsg);
 
-        this.reset();
-        chatBox.scrollTop = chatBox.scrollHeight;
-    });
+            this.reset();
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
 });
 document.getElementById("file-upload").addEventListener("change", function () {
     const fileNameSpan = document.getElementById("file-name");
@@ -53,3 +53,6 @@ window.addEventListener("load", function () {
     chatBox.appendChild(botMsg);
     chatBox.scrollTop = chatBox.scrollHeight;
 });
+document.getElementById("reload-btn").addEventListener("click", function (e) {
+    window.location.reload();
+})

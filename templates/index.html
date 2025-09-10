@@ -8,15 +8,19 @@
 </head>
 <body>
     <div class="chat-wrapper">
-        <h2>🤖 Chatbot Chăm Sóc Khách Hàng</h2>
+        <div class="chat-header">
+            <h2>🤖 Chatbot</h2>
+            <button id="reload-btn" class="reload-button" title="Tải lại">🔄</button>
+        </div>
+
         <div id="chat-box"></div>
         <form id="chat-form" enctype="multipart/form-data">
            <div class="chat-input-box">
                 <input type="text" name="question" placeholder="Nhập câu hỏi..." required>
-                <label for="file-upload" class="file-label">📎</label>
-                <input type="file" id="file-upload" name="file" accept=".docx, .pdf, .txt">
+                <label for="file-upload" class="file-label" title="Tải lên file">📎</label>
+                <input type="file" id="file-upload" name="file" accept=".docx, .pdf, .txt" title="Tải lên file">
                 <span id="file-name" class="file-name"></span>
-                <button type="submit">➤</button>
+                <button type="submit" title="Gửi">➤</button>
             </div>
         </form>
 

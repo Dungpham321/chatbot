@@ -175,3 +175,28 @@ h2 {
   padding: 10px;
   overflow-x: auto;
 }
+.chat-header {
+    display: flex;
+    justify-content: center;       /* Căn giữa theo chiều ngang */
+    align-items: center;
+    gap: 10px;                     /* Khoảng cách giữa tiêu đề và nút */
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.reload-button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.reload-button:hover {
+    transform: rotate(90deg);
+}
