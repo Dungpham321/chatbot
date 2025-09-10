@@ -45,3 +45,11 @@ document.getElementById("file-upload").addEventListener("change", function () {
         fileNameSpan.textContent = "";
     }
 });
+window.addEventListener("load", function () {
+    const chatBox = document.getElementById("chat-box");
+    const botMsg = document.createElement("div");
+    botMsg.className = "message bot-message";
+    botMsg.innerHTML = `<strong>Bot:</strong> Xin chào! Tôi có thể giúp gì cho bạn?`;
+    chatBox.appendChild(botMsg);
+    chatBox.scrollTop = chatBox.scrollHeight;
+});
