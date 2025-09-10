@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Chăm Sóc Khách Hàng</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="chat-wrapper">
+        <h2>🤖 Chatbot Chăm Sóc Khách Hàng</h2>
+        <div id="chat-box"></div>
+        <form id="chat-form" enctype="multipart/form-data">
+           <div class="chat-input-box">
+                <input type="text" name="question" placeholder="Nhập câu hỏi..." required>
+                <label for="file-upload" class="file-label">📎</label>
+                <input type="file" id="file-upload" name="file" accept=".docx, .pdf, .txt">
+                <span id="file-name" class="file-name"></span>
+                <button type="submit">➤</button>
+            </div>
+        </form>
+
+    </div>
+    <script src="/static/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
